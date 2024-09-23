@@ -1,0 +1,18 @@
+{
+  "name": "express-js-project",
+  "version": "1.0.0",
+  "description": "Home work Molule 4: Node.JS. Lesson 3 HTML and Express/",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Torekhan D.O.",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-js-project": "file:",
+    "nodemon": "^3.1.7"
+  }
+}
