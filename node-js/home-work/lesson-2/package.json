@@ -1,0 +1,16 @@
+{
+  "name": "home-work-lesson-2",
+  "version": "1.0.0",
+  "description": "home work. lesson 2. Node JS.",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Torekhan D.O.",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}

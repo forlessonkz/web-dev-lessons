@@ -1,0 +1,18 @@
+{
+  "name": "lesson-2",
+  "version": "1.0.0",
+  "description": "Project lesson 2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Torekhan D.O.",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "lesson-2": "file:",
+    "nanoid": "^3.3.7",
+    "node-fetch": "^2.7.0"
+  }
+}
