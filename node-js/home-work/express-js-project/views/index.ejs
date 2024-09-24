@@ -1,55 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="../css/main.css">
-</head>
+<%- include('./components/head.ejs', {title: 'Home'}) %>
 <body>
-    <header>
-        <div class="header__container base__container">
-            <div class="header__logo">
-                <img src="/img/logo.svg" alt="">
-            </div>
-            <div class="header__search">
-                <form  action="">
-                    <img src="/img/icons/search.svg" alt="">
-                    <input type="text" placeholder="Search">
-                </form>
-            </div>
-        </div>
-        <div class="breadCrumb base__container">
-            <span>Home > Products</span>
-        </div>
-    </header>
-    <div class="products__container base__container">
-        <div class="products__list">
-            <div class="product__item">
-                <div class="item__top">
-                    <div class="discount">
-                        25%
-                    </div>
-                    <div class="like">
-                        <img src="/img/icons/like-icon.png" alt="">
-                    </div>
-                </div>
-                <a class="product__img" href="">
-                    <img src="/img/products/Modern-Chair.png" alt="">
-                </a>
-                <div class="item__bottom">
-                    <a href="" class="title">
-                        Modern Cheir
-                    </a>
-                    <div class="price">
-                        250 $
-                    </div>
-                    <div class="add__to__card">
-                        <img src="/img/icons/add-btn.png" alt="">
-                    </div>
-                </div>
-                <div class="edit__btn"><span></span><span></span><span></span></div>
-            </div>
+    <%- include('components/header.ejs', {name: '', url: ''} ) %>
+    <div class="home__container base__container">
+        <div class="sections__header">
+            <h1>Home Page</h1> 
+        <div class=" ">
+        
         </div>
     </div>
 </body>

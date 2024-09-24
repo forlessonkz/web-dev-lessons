@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const ejs = require('ejs');
 
 
@@ -9,14 +10,20 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 const PORT = 8000;
 
+const routes = [
+    {path: '/', view: 'index', name: 'Home'},
+    {path: '/product', view: 'products'},
+    {path: '/new', view: 'newProduct'},
+    {path: '/edit', view: 'editProduct'},
+    {path: '/page', view: 'productPage '},
+];
 
-app.get('/', (req, res) => {
-    res.render("index")
-})
 
-app.get('/products', (req, res) => {
-    res.render("products")
-})
+routes.forEach(route => {
+    app.get(route.path, (req, res) => {
+        res.render(route.view);
+    });
+});
 
 
 app.listen(PORT, () => {

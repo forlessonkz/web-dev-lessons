@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,6 +21,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
     box-sizing: border-box;
 	text-decoration: none;
+	font-family: "Inter", sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -31,10 +34,17 @@ body {
 
 input{
 	border: none;
+	outline: none;
 	background-color: transparent;
 }
 
-ol, ul li {
+button {
+	border: none;
+	background-color: transparent;
+}
+
+ol > li, 
+ul > li {
 	list-style: none;
 }
 blockquote, q {
