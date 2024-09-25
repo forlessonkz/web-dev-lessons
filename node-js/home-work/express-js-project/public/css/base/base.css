@@ -58,9 +58,18 @@ body {
     background-color: #151515;
 }
 
+.modal {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 .module__window {
     position: absolute;
-    opacity: 0;
     width: 182px;
     right: -15px;
     bottom: -88px;
@@ -68,11 +77,8 @@ body {
     transition: all ease .3s;
 }
 
-.active {
-    opacity: 1;
-}
 
-.module__window button {
+.module__window  button {
     height: 40px;
     width: 100%;
     border: none;
@@ -81,7 +87,7 @@ body {
     font-weight: 700;
 }
 
-button:last-child {
+a:last-child > button{
     background-color: red;
     color: #fff;
 

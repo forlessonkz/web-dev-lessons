@@ -13,6 +13,7 @@
     "ejs": "^3.1.10",
     "express": "^4.21.0",
     "express-js-project": "file:",
+    "express-session": "^1.18.0",
     "nodemon": "^3.1.7"
   }
 }

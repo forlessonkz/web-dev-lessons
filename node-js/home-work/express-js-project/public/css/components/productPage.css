@@ -1,0 +1,9 @@
+.page__container {
+    position: relative;
+    padding: 50px 50px;
+    background-color: #fff;
+}
+.page__container > .edit__btn {
+    top: 50px;
+    right: 50px;
+}

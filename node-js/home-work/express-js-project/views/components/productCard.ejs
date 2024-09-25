@@ -1,7 +1,11 @@
 <div class="product__item">
     <div class="item__top">
-        <div class="discount">
-            25%
+        <div>
+            <% if(product.discount > 0) { %>
+                <div class="discount">
+                    <%= product.discount %> %
+                </div>
+            <% } %>
         </div>
         <div class="like">
             <img src="/img/icons/like-icon.png" alt="">
@@ -15,17 +19,27 @@
             <%= product.title %>
         </a>
         <div class="price">
-            <%= product.price %>
+            <% if(product.discount > 0){ %>
+                <%= product.price - (product.price / 100 * product.discount) %>
+             <% } else { %>
+                <%= product.price %>
+            <% } %>
         </div>
         <div class="add__to__card">
             <img src="/img/icons/add-btn.png" alt="">
         </div>
     </div>
-    <div class="edit__btn">
-        <span></span>
-        <span></span>
-        <span></span>
-        <%- include('../components/editWindow.ejs') %>
-    </div>
-    
+    <%- include('../components/editWindow.ejs') %>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        const editBtn = document.getElementById('edit__btn');
+        const modal = document.getElementById('modal');
+
+        editBtn.addEventListener("click", function() {
+            modal.classList.toggle('active')
+            // modal.classList.remove('active')
+        })
+    })
+</script>

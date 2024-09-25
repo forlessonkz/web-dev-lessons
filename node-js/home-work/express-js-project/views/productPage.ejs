@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./components/head.ejs', {title: 'Home'}) %>
+<body>
+    <%- include('components/header.ejs', {name: 'Products', url: '/product'} ) %>
+    <div class="page__container base__container">
+        <%- include('./components/editWindow.ejs') %>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const editBtn = document.getElementById('edit__btn');
+            const modal = document.getElementById('modal');
+    
+            editBtn.addEventListener("click", function() {
+                modal.classList.toggle('active')
+                // modal.classList.remove('active')
+            })
+        })
+    </script>
+</body>
+</html>
