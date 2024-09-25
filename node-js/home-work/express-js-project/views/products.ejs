@@ -13,37 +13,9 @@
             </a>
         </div>
         <div class="products__list">
-            <div class="product__item">
-                <div class="item__top">
-                    <div class="discount">
-                        25%
-                    </div>
-                    <div class="like">
-                        <img src="/img/icons/like-icon.png" alt="">
-                    </div>
-                </div>
-                <a class="product__img" href="">
-                    <img src="/img/products/Modern-Chair.png" alt="">
-                </a>
-                <div class="item__bottom">
-                    <a href="" class="title">
-                        Modern Cheir
-                    </a>
-                    <div class="price">
-                        250 $
-                    </div>
-                    <div class="add__to__card">
-                        <img src="/img/icons/add-btn.png" alt="">
-                    </div>
-                </div>
-                <div class="edit__btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <%- include('./components/editWindow.ejs') %>
-                </div>
-                
-            </div>
+            <% products.forEach(product => { %> <!-- Открываем блок для JavaScript -->
+                <%- include('./components/productCard.ejs', {product: product}) %> <!-- Рендерим компонент с продуктом -->
+            <% }); %> <!-- Закрываем блок -->
         </div>
     </div>
 </body>
