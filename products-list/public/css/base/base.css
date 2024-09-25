@@ -1,0 +1,18 @@
+/* Body base color */
+body {
+    background-color: #F3F5F6;
+}
+
+/* Base container styles */
+.base__container {
+    width: 1512px;
+    margin: 0 auto;
+}
+
+/* Sections header */
+.sections__header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+}
+

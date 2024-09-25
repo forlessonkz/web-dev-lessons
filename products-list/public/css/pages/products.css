@@ -1,0 +1,13 @@
+.products__container {
+    padding: 50px 50px;
+    background-color: #fff;
+}
+
+.products__list {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+

@@ -1,0 +1,8 @@
+@import url('./base/reset.css');
+@import url('./base/vars.css');
+@import url('./base/base.css');
+
+
+@import url('./pages/products.css');
+
+@import url('/components/productCard/productCard.css');
