@@ -10,6 +10,11 @@ body {
 }
 
 /* Sections header */
+.sections__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .sections__header h1 {
     font-size: 32px;
     font-weight: 700;

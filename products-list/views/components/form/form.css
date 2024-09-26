@@ -1,0 +1,37 @@
+
+.form__container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__container input{
+    padding-left: 25px;
+    width: 650px;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid #00000088;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.form__container input::placeholder {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+}
+
+.btn__add {
+    width: 680px;
+    height: 50px;
+    border-radius: 15px;
+
+    background-color: #fe6769;
+    cursor: pointer;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    color: #fff;
+
+}

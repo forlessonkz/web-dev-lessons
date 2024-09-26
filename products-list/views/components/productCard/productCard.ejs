@@ -20,14 +20,14 @@
         </a>
         <div class="price">
             <% if(product.discount > 0){ %>
-                <%= product.price - (product.price / 100 * product.discount) %>
+                <%= new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'USD' }).format(product.price - (product.price / 100 * product.discount)) %>
              <% } else { %>
-                <%= product.price %>
+                <%= new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'USD' }).format(product.price) %>
             <% } %>
         </div>
-        <div class="add__to__card">
+        <div class="add__to__card" onclick="addToCart('')">
             <img src="/images/icons/add-btn.png" alt="">
         </div>
     </div>
-
 </div>
+

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./components/head.ejs', {title: 'Edit Product'}) %>
+<body>
+    <%- include('./components/header/header.ejs', {}) %>
+    
+    <div class="add__product__container base__container"> 
+        <div class="sections__header">
+            <h1>Edit product</h1>
+        </div>
+        <%- include('./components/form/form.ejs', {button: 'Edit'}) %>
+    </div>
+</body>
+</html>

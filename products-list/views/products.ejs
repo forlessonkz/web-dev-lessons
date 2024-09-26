@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
+<%- include('./components/head.ejs', {title: 'Products'}) %>
 <body>
+    <%- include('./components/header/header.ejs') %>
     <div class="products__container base__container">
         <div class="sections__header">
             <h1>Cheirs</h1>
+            <div>
+                <%- include('./components/createProductBtn/createProductBtn.ejs') %>
+            </div>
         </div>
         <div class="products__list">
             <% products.forEach( product => {%>
