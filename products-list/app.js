@@ -41,19 +41,10 @@ async function getProducts() {
     }
 }
 
-app.get('/products', async (req, res) => {
-    try {
-        const products = await getProducts();
-        res.render('products', {products});
-    } catch (error) {
-        res.status(500).send('Ошибка при загрузке продуктов')
-    }
-});
 
 app.post('/add-to-cart/:id', async (req, res) => {
     const productId = req.params.id;
 
-    // Получаем текущую корзину из сессии, если её нет, создаем пустую
     if (!req.session.cart) {
         req.session.cart = [];
     }
@@ -66,11 +57,13 @@ app.post('/add-to-cart/:id', async (req, res) => {
             req.session.cart.push(product);
         }
 
-        res.redirect('/cart');
+        // Возвращаем JSON с успешным сообщением
+        res.json({ success: true, message: 'Product added to cart', product });
     } catch (error) {
-        res.status(500).send('Ошибка при добавлении товара в корзину');
+        res.status(500).json({ success: false, message: 'Error adding product to cart' });
     }
 });
+
 
 app.get('/cart', (req, res) => {
     const cart = req.session.cart || [];
@@ -86,6 +79,15 @@ app.post('/remove-from-cart/:id', (req, res) => {
     res.redirect('/cart');
 });
 
+
+app.get('/products', async (req, res) => {
+    try {
+        const products = await getProducts();
+        res.render('products', {products});
+    } catch (error) {
+        res.status(500).send('Ошибка при загрузке продуктов')
+    }
+});
 
 
 routes.forEach(route => {

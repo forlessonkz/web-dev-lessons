@@ -26,12 +26,35 @@
             <% } %>
         </div>
         <div class="add__to__card">
-            <form action="/add-to-cart/<%= product.id %>" method="POST">
+            <form id="add-to-cart-form-<%= product.id %>" onsubmit="addToCart(event, <% product.id %> )">
                 <button type="submit">
-                    <img src="/images/icons/add-btn.png" alt="">
+                    <img src="/images/icons/add-btn.png" alt="Добавить в корзину">
                 </button>
             </form>
         </div>
     </div>
 </div>
 
+<script>
+    function addToCart(event, productId) {
+        event.preventDefault(); // Отмена стандартного поведения формы
+    
+        fetch(`/add-to-cart/${productId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Product added to cart successfully!');
+            } else {
+                alert('Error adding product to cart');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
