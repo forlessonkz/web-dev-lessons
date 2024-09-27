@@ -25,8 +25,12 @@
                 <%= new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'USD' }).format(product.price) %>
             <% } %>
         </div>
-        <div class="add__to__card" onclick="addToCart('')">
-            <img src="/images/icons/add-btn.png" alt="">
+        <div class="add__to__card">
+            <form action="/add-to-cart/<%= product.id %>" method="POST">
+                <button type="submit">
+                    <img src="/images/icons/add-btn.png" alt="">
+                </button>
+            </form>
         </div>
     </div>
 </div>

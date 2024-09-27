@@ -5,7 +5,22 @@
 <body>
     <%- include('./components/header/header.ejs') %>
     <div class="cart__container base__container"> 
-
+        <% if (cart.length === 0) { %>
+            <p>Ваша корзина пуста.</p>
+        <% } else { %>
+            <div class="cart__list">
+                <% cart.forEach(product => { %>
+                    <div class="product__cart">
+                        <div class="product__img">
+                            <img src="<%- product.img %>" alt="<%- product.title %>">
+                        </div>
+                        <div class="product__info">
+                            <div><%= product.title %></div>
+                        </div>
+                    </div>
+                <% }) %>
+            </ul>
+        <% } %>
     </div>
 </body>
 </html>

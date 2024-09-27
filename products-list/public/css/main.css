@@ -8,8 +8,11 @@
 @import url('/components/createProductBtn/createProductPtn.css');
 @import url('/components/productCard/productCard.css');
 
-@import url('./pages/cart.css');
-@import url('./pages/productPage.css');
+
 
 @import url('./pages/editProuct.css');
 @import url('/components/form/form.css');
+
+@import url('./pages/cart.css');
+@import url('./pages/productPage.css');
+@import url('./pages/productCard.css');

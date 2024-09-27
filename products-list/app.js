@@ -50,6 +50,44 @@ app.get('/products', async (req, res) => {
     }
 });
 
+app.post('/add-to-cart/:id', async (req, res) => {
+    const productId = req.params.id;
+
+    // Получаем текущую корзину из сессии, если её нет, создаем пустую
+    if (!req.session.cart) {
+        req.session.cart = [];
+    }
+
+    try {
+        const products = await getProducts();
+        const product = products.find(p => p.id === productId);
+
+        if (product) {
+            req.session.cart.push(product);
+        }
+
+        res.redirect('/cart');
+    } catch (error) {
+        res.status(500).send('Ошибка при добавлении товара в корзину');
+    }
+});
+
+app.get('/cart', (req, res) => {
+    const cart = req.session.cart || [];
+    res.render('cart', { cart });
+});
+
+
+app.post('/remove-from-cart/:id', (req, res) => {
+    const productId = req.params.id;
+
+    req.session.cart = req.session.cart.filter(item => item.id !== productId);
+
+    res.redirect('/cart');
+});
+
+
+
 routes.forEach(route => {
     app.get(route.url,  (req, res) => {
         res.render(route.page);
