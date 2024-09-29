@@ -2,24 +2,26 @@
 <html lang="en">
 <%- include('./partials/head.ejs', {title: "Home"}) %>
 <body>
-    <div class="container mt-3">
-        <h2>ToDo</h2>
-        <a href="/new"><button class="btn btn-primary mb-3">Add new task</button></a>
-        
-        <ol class="list-group list-group-numbered">
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Subheading</div>
-                Content for list item
-              </div>
-              <div>
-                <a href="/edit"><button class="btn btn-warning">Edit</button></a>
-                
-                <button class="btn btn-danger">Delete</button>
+  <div class="container mt-3">
+      <h2>ToDo</h2>
+      <a href="/new"><button class="btn btn-primary mb-3">Add new task</button></a>
+      
+      <ol class="list-group list-group-numbered">
+        <%  data.forEach(item => {%>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold"><%= item.title %></div>
+              <%= item.description %>
             </div>
-            </li>
-          </ol>
-    </div>
-</body>
+            <div>
+              <a href="/edit/<%= item._id %>"><button class="btn btn-warning">Edit</button></a>
+              <button type="submit" class="btn btn-danger" onclick="deleteItem('<%= item._id %>')">Delete</button>
+            </div>
+          </li>
+        <% })%>   
+        </ol>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/delete.js"></script>
 </body>
 </html>

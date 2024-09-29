@@ -1,0 +1,30 @@
+[
+    {   
+        "id": "1",
+        "title": "Modern Cheir",
+        "price": 400,
+        "image": "../public/images/products/Modern-Chair.png",
+        "discount": 0
+    },
+    {   
+        "id": "2",
+        "title": "Modern Cheir",
+        "price": 600,
+        "image": "../public/images/products/Modern-Chair.png",
+        "discount": 20
+    },
+    {   
+        "id": "3",
+        "title": "Modern Cheir",
+        "price": 800,
+        "image": "../public/images/products/Modern-Chair.png",
+        "discount": 25
+    },
+    {   
+        "id": "4",
+        "title": "Modern Cheir",
+        "price": 1000,
+        "image": "../public/images/products/Modern-Chair.png",
+        "discount": 5
+    }
+]

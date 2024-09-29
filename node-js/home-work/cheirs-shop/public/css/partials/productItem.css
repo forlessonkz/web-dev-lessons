@@ -1,0 +1,124 @@
+.product__item {
+    position: relative;
+    width: calc(25% - 25px);
+    border-radius: 15px;
+    background-color: #EDEDED;
+
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product__item__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discount {
+    width: 47px;
+    height: 31px;
+    background-color: #FE6769;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.product__item__top  > img {
+    width: 30px;
+    height: 30px;
+}
+
+.product__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product__item__bottom {
+    position: relative;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.product__item__bottom > div {
+    text-align: center;
+}
+
+.product__add__btn {
+    position: absolute;
+    bottom: -50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+    background-color: #FE6769;
+    border-radius: 50%;
+}
+
+.product__title {
+    margin-bottom: 8px;
+}
+
+.product__title, 
+.product__price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: #203530;
+}
+
+
+/* .edit__btn  {
+    
+} */
+
+.edit__btn > img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+.edit__window {
+    position: absolute;
+    right: 0;
+    bottom: -75px;
+
+    visibility: hidden;
+}
+
+.edit__window > div {
+    width: 183px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F8F8F8;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.edit__window div:last-child {
+    color: #fff;
+    background-color: red;
+}

@@ -1,20 +1,17 @@
 {
-  "name": "to-do",
+  "name": "cheirs-shop",
   "version": "1.0.0",
-  "description": "to do project ",
+  "description": "Home work Module 4: Dode.JS Lesson 3 - HTML and Express, simple project, cheirs shop.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Torekhan D.O.",
+  "author": "Torekhan Daurim Oralbekuly",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.0",
-    "mongodb": "^6.9.0",
-    "mongoose": "^8.7.0",
-    "nodemon": "^3.1.7",
-    "to-do": "file:"
+    "nodemon": "^3.1.7"
   }
 }

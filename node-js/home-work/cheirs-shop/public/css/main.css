@@ -1,0 +1,13 @@
+/* Base style */
+@import url('./base/reset.css');
+@import url('./base/vars.css');
+@import url('./base/base.css');
+
+/* Partials styles */
+@import url('./partials/header.css');
+@import url('./partials/productItem.css');
+@import url('./partials/form.css');
+
+/* Pages styles */
+@import url('./pages/products.css');
+

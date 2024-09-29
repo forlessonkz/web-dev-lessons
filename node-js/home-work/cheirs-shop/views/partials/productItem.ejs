@@ -1,0 +1,31 @@
+<div class="product__item">
+    <div class="product__item__top">
+        <div><% if(product.discount > 0) {%>
+            <div class="discount"><%= product.discount %> %</div> 
+        <% } %>
+    </div>
+        <img src="/images/icons/like-icon.png" alt="like">
+    </div>
+    <a href=""><img class="product__img" src="/images/products/Modern-Chair.png" alt=""></a>
+    <div class="product__item__bottom">
+        <div>
+            <div class="product__title"><%= product.title %></div>
+            <div class="product__price"><% if(product.price > 0) { %>
+                <%= Math.round(product.price - (product.price / 100 * product.discount)) %> $
+            <% } else { %>
+                <%= product.price %> $
+            <% } %>
+            </div>
+        </div>
+        <div class="product__add__btn">
+            <img class="white__filter" src="/images/icons/add-icon.png" alt="">
+        </div>
+    </div>
+    <div class="edit__btn">
+        <img src="/images/icons/three-dots.png" alt="edit">
+        <div class="edit__window">
+            <div class="edit__btn">Edit</div>
+            <div class="delete__btn">Delete</div>
+        </div>
+    </div>
+</div>

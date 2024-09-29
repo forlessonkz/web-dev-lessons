@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs', {title: 'Products'}) %>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <div class="products__container base__container base__padding">
+        <div class="sections__header">
+            <h1>Cheirs</h1>
+            <a href="/new">
+                <button>
+                    <img class="white__filter" src="/images/icons/add-icon.png" alt="">
+                    Add product
+                </button>
+            </a>
+        </div>
+        <div class="products__list">
+            <% products.forEach(product => {%>
+                <%- include('./partials/productItem.ejs', {product: product}) %>
+            <% }) %>
+            
+        </div>
+    </div>
+</body>
+</html>

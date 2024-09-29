@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Torekhan Daurim Oralbekuly",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lesson-1": "file:"
+  }
 }
