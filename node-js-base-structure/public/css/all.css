@@ -1,0 +1,10 @@
+
+@import url('./vendor/reset.css');
+@import url('./vendor/vars.css');
+@import url('./vendor/same.css');
+
+/* Pages styles */
+@import url('./pages/index.css');
+
+/* Components */
+@import url('./components/header.css');

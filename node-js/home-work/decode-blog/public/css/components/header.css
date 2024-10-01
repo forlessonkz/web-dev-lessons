@@ -1,0 +1,14 @@
+.header-logo {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 58px;
+    color: #00A2DC;
+}
+
+.header-container {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 100px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs', {title: 'Home'}) %>
+<body>
+    <header>
+        <div class="header-logo">
+            <div class="logo-svg">
+                <%- include('./partials/headerLogo.ejs') %>
+            </div>
+        </div>
+        <div class="head-menu">
+            <a href="">
+                <%- include("./partials/playIcon.ejs") %>
+                Онлайн кинотеатр
+            </a>
+            <a href="">
+                <%- include('./partials/tvIcon.ejs') %>
+                Установить на ТВ
+            </a>
+            <div class="head-serch">
+                <input type="text" placeholder="Фильмы, сериалы, персоны"> 
+                <button>
+                    <%- include('./partials/searchIcon.ejs') %>
+                </button>
+            </div>
+        </div>
+        <div class="head-buttons">
+            <a href="">Войти</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main">
+            <div class="categories">
+                <a href="">Дарма</a>
+                <a href="">Комедии</a>
+                <a href="">Ужасы</a>
+            </div>
+            <div class="main-content">
+                <div class="card-left">
+                    <div class="film-img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="film-info">
+                        <a href="">Все везде и сразу</a>
+                        <a href="">Everything Everywhere All at Once18+</a>
+                        <a href="">США, Фантастика</a>
+                        <button>Смотреть</button>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="film-rate">
+                        <p>7.3</p>
+                    </div>
+                    <button>
+                        <img src="../public/img/icon/will-watch-icon.svg" alt="">
+                        Буду смотреть
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
