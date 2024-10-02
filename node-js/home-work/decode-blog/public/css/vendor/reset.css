@@ -47,10 +47,14 @@ table {
 	border-spacing: 0;
 }
 
-button, input { 
+button, input, input::placeholder { 
 	border: none;
 	outline: none;
 	background-color: transparent;
+	
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
 }
 
 /* Roboto fonts */
