@@ -19,7 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
     box-sizing: border-box;
 	text-decoration: none;
-	font-family: '-apple-system', system-ui, 'BlinkMacSystemFont', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif 
+	font-family: '-apple-system', system-ui, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif; 
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -44,8 +44,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-button input {
+
+button, input {
 	border: none;
 	outline: none;
 	background-color: transparent;
+	font-family: '-apple-system', system-ui, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, sans-serif;
 }
