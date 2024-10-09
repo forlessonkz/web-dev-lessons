@@ -1,0 +1,14 @@
+.profile-page {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+}
+
+.nav-bar {
+    width: 18%;
+    border-right: 1px solid #DBDBDB;
+}
+
+.profile-container {
+}
