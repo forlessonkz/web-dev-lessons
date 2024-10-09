@@ -1,0 +1,27 @@
+.home {
+    position: relative;
+    width: 100px;
+    height: 100vh;
+
+}
+
+
+.count-container > button{
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin-top: 5px;
+    
+}
+
+.plus {
+    background-color: green;
+}
+
+.minus {
+    background-color: red;
+}
+
+.reset {
+    background-color: yellow;
+}
