@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer/Footer';
 import '../public/style/all.css'
 
 // import localFont from "next/font/local";
@@ -24,7 +23,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
-        <Footer />
       </body>
     </html>
   );
