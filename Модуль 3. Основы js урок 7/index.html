@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base stucture</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="task-1">
+            <h1>Task number 4</h1>
+            <input id="inputTask-1" type="text" placeholder="Enter your number">
+            <button onclick="getSumOfInput()">Get value sum</button>
+            <div class="value-sum">
+                Value sum: <span id="sum-task-1"></span>
+            </div>
+        </div>
+        <div class="task-2">
+            <h1>Task 2</h1>
+            <input type="text" class="input-1" placeholder="Enter number">
+            <input type="text" class="input-2" placeholder="Enter number">
+            <button onclick="swapInputValues()">Change</button>
+        </div>
+        <div class="task-3">
+            <h1>Task 3</h1>
+            <input type="text"><button onclick="changeBcg(this)">Chang Bcg</button>
+        </div>
+        <div class="task-4">
+            <h1>Task number 4</h1>
+            <input class="inputTask3" type="text" placeholder="Inter your number">
+            <button class="btn-1" onclick="lockInput()">Заблокировать</button>
+            <button class="btn-2" onclick="unlockInput()">Разблокировать</button>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
